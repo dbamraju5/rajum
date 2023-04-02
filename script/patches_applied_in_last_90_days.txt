@@ -1,0 +1,11 @@
+SELECT distinct bug_number
+  FROM ad_adop_session_patches
+WHERE     1 = 1
+       AND bug_number NOT LIKE '%CLONE%'
+       AND bug_number NOT LIKE '%ADADMIN%'
+       AND bug_number NOT LIKE '%FRC%'
+       AND bug_number NOT LIKE '%PTB%'
+       AND bug_number NOT LIKE '%ESA%'
+       AND bug_number NOT LIKE '%AR%'
+       AND start_date > SYSDATE - 90
+       order by 1
